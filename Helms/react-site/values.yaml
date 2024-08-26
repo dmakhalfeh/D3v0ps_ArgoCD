@@ -5,7 +5,7 @@ namespace: prod
 
 image:
   repository: danielmak1/d3v0ps
-  tag: "1"
+  tag: "2"
 
 containerPort: 80
 
