@@ -1,0 +1,22 @@
+replicaCount: 1
+
+releaseName: react-site
+namespace: prod
+
+image:
+  repository: danielmak1/d3v0ps
+  tag: "1"
+
+containerPort: 80
+
+service:
+  port: 80
+
+ingress:
+  name: ingress-hosts
+  host: d3v0ps.duckdns.org
+  path: "/"
+
+imagePullSecrets: dockerhub
+
+maxSurge: 3
