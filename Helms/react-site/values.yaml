@@ -16,6 +16,7 @@ ingress:
   name: ingress-hosts
   host: d3v0ps.duckdns.org
   path: "/"
+  class: nginx
 
 imagePullSecrets: dockerhub
 

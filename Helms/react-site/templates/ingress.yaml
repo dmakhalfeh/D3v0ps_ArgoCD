@@ -6,7 +6,7 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
-  ingressClassName: traefik # This is the default ingress class for the NGINX Ingress Controller
+  ingressClassName: { { .Values.ingress.class } } # This is the default ingress class for the NGINX Ingress Controller
   tls:
     - hosts:
       - {{ .Values.ingress.host }}
@@ -16,7 +16,7 @@ spec:
       http:
         paths:
           - pathType: Prefix
-            path: "/"
+            path: { { .Values.ingress.path } }
             backend:
               service:
                 name: {{ .Values.releaseName }}-service
