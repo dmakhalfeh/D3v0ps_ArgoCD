@@ -16,7 +16,7 @@ spec:
       http:
         paths:
           - pathType: Prefix
-            path: { { .Values.ingress.path } }
+            path: {{ .Values.ingress.path }}
             backend:
               service:
                 name: {{ .Values.releaseName }}-service
